@@ -1,0 +1,38 @@
+<h1>My Tomogotchi</h1>
+#if ($tomogotchi)
+  <p>Hunger:</p>
+  <p>$tomogotchi.getHunger()</p>
+  <p>Sleep:</p>
+  <p>$tomogotchi.getSleep()</p>
+  <p>Activity:</p>
+  <p>$tomogotchi.getActivity()</p>
+  <div class="container">
+
+    <form action='/myTomogotchiFeed' method="post">
+
+      <button id="tomogotchiFeedBtn" type="submit" class="btn">FEED</button>
+
+    </form>
+
+    <form action='/myTomogotchiRest' method="post">
+
+      <button id="tomogotchiRestBtn" type="submit" class="btn">REST</button>
+
+    </form>
+
+    <form action='/myTomogotchiExercise' method="post">
+
+      <button id="tomogotchiExerciseBtn" type="submit" class="btn">EXERCISE</button>
+
+    </form>
+  </div>
+#else
+  <p>No tomogotchi!</p>
+  <h1>New Tomogotchi</h1>
+
+  <form action='/newTomogotchi' method="post">
+
+    <button id="newTomogotchiBtn" type="submit" class="btn">New Tomogotchi</button>
+
+  </form>
+#end
